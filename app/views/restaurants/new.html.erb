@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="d-flex justify-content-center border-bottom bg-dark text-white">
+    <h1>Add a restaurant</h1>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12 d-flex align-items-center justify-content-center bg-dark text-white p-3">
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.input :name, class: "form-control mb-2" %>
+        <%= f.input :address, class: "form-control mb-2" %>
+        <%= f.input :phone_number, class: "form-control mb-2" %>
+        <%= f.input :category, collection: %w[chinese italian japanese french belgian], class: "form-control mb-2" %>
+        <div class="d-flex justify-content-center">
+          <%= f.submit class: "btn btn-info" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mt-2">
+    <%= link_to "Back home", restaurants_path, class: "btn btn-danger" %>
+  </div>
+</div>

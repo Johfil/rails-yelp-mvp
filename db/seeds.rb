@@ -7,3 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+restaurants_data = [
+  { name: "Chez Jimmy", address: "17 rue des marchands", phone_number: "0682319475", category: "french" },
+  { name: "Sushi Express", address: "3 rue de la Paix", phone_number: "0682319476", category: "japanese" },
+  { name: "Pasta Paradise", address: "25 rue Edgar", phone_number: "0682319477", category: "italian" },
+  { name: "Spicy Bites", address: "17 rue Jean-Paul", phone_number: "0682319478", category: "indian" },
+  { name: "Burger Joint", address: "32 rue du Dôme", phone_number: "0682319479", category: "american" }
+]
+
+restaurants_data.each do |restaurant_data|
+  Restaurant.create(restaurant_data)
+end
